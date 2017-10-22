@@ -2,6 +2,7 @@ import sys
 turn=0
 x = 0
 y = 0
+
 # game loop
 while True:
     
@@ -25,7 +26,6 @@ while True:
         thrust = 100
     
     #angle
-   
     if abs(next_checkpoint_angle) > 90:
         thrust = 0
     
