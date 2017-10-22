@@ -15,12 +15,6 @@ while True:
         prevX = x
         prevY = y
 
-    
-    """
-    #velx and vely for velocity
-    velX = x - prevX
-    velY = y - prevY
-   """
    #distance 
    # The checkpoints are circular, with a radius of 600 units.
     if next_checkpoint_dist < 1500: 
@@ -31,18 +25,9 @@ while True:
         thrust = 100
     
     #angle
-    # if next_checkpoint_angle > 20 or next_checkpoint_angle < -20:
-    #     thrust = 58
-    # elif next_checkpoint_angle > 35 or next_checkpoint_angle < -30:
-    #     thrust = 70
-    # elif next_checkpoint_angle > 45 or next_checkpoint_angle < -40:
-    #     thrust = 80
-    # elif next_checkpoint_angle > 50 or next_checkpoint_angle < -50:
-    #     thrust = 100
+   
     if abs(next_checkpoint_angle) > 90:
         thrust = 0
-    # elif next_checkpoint_angle > 180 or next_checkpoint_angle < -180: # do u understand that there're only 360 angles? and if it's [-180...180] then it can't be >180 or <-180
-    #     thrust = 10
     
     if abs(next_checkpoint_angle) < 50 and next_checkpoint_dist<2600 and ((next_checkpoint_x-8000)**2+(next_checkpoint_y-4500)**2)**0.5>3000:
         next_checkpoint_x = 9000
@@ -56,9 +41,6 @@ while True:
     
     if turn==0:
         thrust=0
-    #shield
-    #if next_checkpoint_dist < 500 and next_checkpoint_angle < 35:
-     #   thrust = "SHIELD"
-       
+     
     print(str(next_checkpoint_x -(x-prevX)*3)+ " " + str(next_checkpoint_y -(y-prevY)*3) + " " + str(thrust))
     turn+=1
