@@ -1,3 +1,4 @@
+/* -------------------------------------Soure: https://github.com/Inoryy/csb-ai-starter-----------------------------------------------*/
 #pragma GCC optimize("Ofast")
 #pragma GCC optimize("inline")
 #pragma GCC optimize("omit-frame-pointer")
